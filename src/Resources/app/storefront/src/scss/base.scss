@@ -1,0 +1,8 @@
+/*
+Override default CSS rule sets
+==================================================
+This file is used to override CSS rule sets from the Shopware Storefront or Bootstrap.
+It is recommended to split rules into different files, representing the said component.
+*/
+
+@import "component/product-box";

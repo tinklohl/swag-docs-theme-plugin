@@ -1,0 +1,83 @@
+{
+  "name": "ThemeDemo",
+  "author": "Shopware AG",
+  "views": [
+     "@Storefront",
+     "@Plugins",
+     "@ThemeDemo"
+  ],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/theme-demo.js"
+  ],
+  "asset": [
+    "app/storefront/dist/assets"
+  ],
+  "config": {
+      "blocks": {
+          "product-box":{
+              "label": {
+                  "en-GB": "Product box",
+                  "de-DE": "Produktkarte"
+              }
+          }
+      },
+      "sections": {
+          "color": {
+              "label": {
+                  "en-GB": "Color",
+                  "de-DE": "Farbe"
+              }
+          },
+          "icon": {
+              "label": {
+                  "en-GB": "Icon",
+                  "de-DE": "Symbol"
+              }
+          }
+      },
+      "fields": {
+          "themedemo-product-box-checkout-logo": {
+              "label": {
+                  "en-GB": "Checkout button logo",
+                  "de-DE": "Kaufen-Button Logo"
+              },
+              "type": "media",
+              "value": "app/storefront/dist/assets/icon/cart-plus.svg",
+              "editable": true,
+              "block": "product-box",
+              "section": "icon",
+              "order": 100
+          },
+          "themedemo-product-box-primary-color": {
+              "label": {
+                  "en-GB": "Primary color",
+                  "de-DE": "Primärfarbe"
+              },
+              "type": "color",
+              "value": "#903200",
+              "editable": true,
+              "block": "product-box",
+              "section": "color",
+              "order": 100
+          },
+          "themedemo-product-box-secondary-color": {
+              "label": {
+                  "en-GB": "Secondary Color",
+                  "de-DE": "Sekundärfarbe"
+              },
+              "type": "color",
+              "value": "#ffb413",
+              "editable": true,
+              "block": "product-box",
+              "section": "color",
+              "order": 200
+          }
+      }
+  }
+}

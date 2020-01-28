@@ -1,0 +1,29 @@
+/*
+Product box
+==============================================
+Styling for productbox component inside listings.
+*/
+
+.cms-listing-row {
+    > .cms-listing-col {
+        &:nth-of-type(odd) {
+            .product-box {
+                border-color: $themedemo-product-box-primary-color;
+
+                .btn-buy {
+                    background-color: $themedemo-product-box-primary-color;
+                }
+            }
+        }
+
+        &:nth-of-type(even) {
+            .product-box {
+                border-color: $themedemo-product-box-secondary-color;
+
+                .btn-buy {
+                    background-color: $themedemo-product-box-secondary-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{% sw_extends '@Storefront/storefront/component/product/card/action.html.twig' %}
+
+{# "add to cart button" #}
+{% block component_product_box_action_form %}
+
+    {# inherit parent block #}
+    {% block component_product_box_action_buy_redirect_input %}
+        {{ parent() }}
+    {% endblock %}
+
+    {# inherit parent block #}
+    {% block page_product_detail_buy_product_buy_info %}
+        {{ parent() }}
+    {% endblock %}
+
+    {# override visible add to cart button content with icon from theme #}
+    <button class="btn btn-block btn-buy"
+            title="{{ "listing.boxAddProduct"|trans|striptags }}"
+            data-checkout-cart>
+        <img src="{{ shopware.theme['themedemo-product-box-checkout-logo'] |sw_encode_url }}"
+             width="35" height="35"
+             fill="white">
+    </button>
+{% endblock %}
